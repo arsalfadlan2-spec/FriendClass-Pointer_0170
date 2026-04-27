@@ -18,18 +18,14 @@ public:
 int main(){
     mahasiswa mhs(1); // objek mhs
     mhs.shownim();
-}
 
-int main (){
-    mahasiswa mhs(1); // objek mhs
-    mhs.shownim();
-
-    mahasiswa &refmhs = mhs; // pointer refmhs
-    refmhs.nim = 2; // member accsess operator
+    mahasiswa &refmhs = mhs; // reference
+    refmhs.nim = 2;
     refmhs.shownim();
-    
-    mahasiswa *pMhs = &mhs; // pointer pMhs
-    pMhs->nim = 3; // operator panah
+
+    mahasiswa *pMhs = &mhs; // pointer
+    pMhs->nim = 3;
     pMhs->shownim();
 
+    return 0;
 }
