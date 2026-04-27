@@ -2,21 +2,26 @@
 using namespace std;
 
 class mahasiswa{
-    public:
+public:
     int nim;
+
+    // constructor
+    mahasiswa(int x){
+        nim = x;
+    }
+
     void shownim(){
-        cout<< " No Induk: "<<nim<<endl;
+        cout << "No Induk: " << nim << endl;
     }
 };
 
-int main ()}
-};
-
-int main ()
-int main () {
+int main(){
     mahasiswa *mhs = new mahasiswa(1); // pointer mhs
+
     mhs->nim = 2;
     mhs->shownim();
-    delete mhs; 
+
+    delete mhs;
+
     return 0;
 }
