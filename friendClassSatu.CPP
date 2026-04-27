@@ -9,7 +9,7 @@ private:
     string nama;
 
 public:
-    friend class siswa; // friend class
+    friend class siswa;
 
     void setNama(string pNama){
         nama = pNama;
@@ -25,6 +25,11 @@ public:
         id = pId;
     }
 
+    // void khusus menampilkan ID
+    void displayId(){
+        cout << "ID   : " << id << endl;
+    }
+
     void displayAll(orang &a){
         cout << "ID   : " << id << endl;
         cout << "Nama : " << a.nama << endl;
@@ -38,25 +43,8 @@ int main(){
     org.setNama("Achmad");
     s.setId(101);
 
-    s.displayAll(org);
+    s.displayId();     // tampilkan ID saja
+    s.displayAll(org); // tampilkan semua
 
     return 0;
-}
-
-public:
-    void setId(int pId);
-    void displayAll(orang &a)
-    {
-        cout << id << endl << a.nama << endl;
-    }
-};
-
-void siswa::displayAll(orang &a)
-{
-    cout << id << endl << a.nama << endl; 
-}
-
-void siswa::setNama(string pnama)
-{
-    nama = pnama;
 }
