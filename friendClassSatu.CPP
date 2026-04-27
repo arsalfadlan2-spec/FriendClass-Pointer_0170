@@ -42,3 +42,21 @@ int main(){
 
     return 0;
 }
+
+public:
+    void setId(int pId);
+    void displayAll(orang &a)
+    {
+        cout << id << endl << a.nama << endl;
+    }
+};
+
+void siswa::displayAll(orang &a)
+{
+    cout << id << endl << a.nama << endl; 
+}
+
+void siswa::setNama(string pnama)
+{
+    nama = pnama;
+}
