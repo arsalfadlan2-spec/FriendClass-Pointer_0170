@@ -1,27 +1,39 @@
+#include <iostream>
+using namespace std;
+
+class pelajar; // forward declaration
+
+class manusia
 {
-    public:
+public:
     void showallpelajar(pelajar &x);
-};
 };
 
 class pelajar
 {
-    private:
+private:
     int nilai;
-    public:
-    pelajar() { nilai = 100; }
+
+public:
+    pelajar()
+    {
+        nilai = 100;
+    }
+
     friend void manusia::showallpelajar(pelajar &x);
 };
 
 void manusia::showallpelajar(pelajar &x)
 {
-    cout << x.nilai;
+    cout << "Nilai Pelajar : " << x.nilai << endl;
 }
 
 int main()
 {
     manusia budi;
     pelajar pbudi;
+
     budi.showallpelajar(pbudi);
+
     return 0;
 }
