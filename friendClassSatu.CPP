@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-class siswa; // forward declaration
+class siswa;
 
 class orang{
 private:
@@ -21,11 +21,8 @@ private:
     int id;
 
 public:
-    void setId(int pId){
-        id = pId;
-    }
+    void setId(int pId); // deklarasi
 
-    // void khusus menampilkan ID
     void displayId(){
         cout << "ID   : " << id << endl;
     }
@@ -36,15 +33,20 @@ public:
     }
 };
 
+// definisi method di luar class
+void siswa::setId(int pId){
+    id = pId;
+}
+
 int main(){
-    orang org;
-    siswa s;
+    orang joko;
+    joko.setNama("Joko Kumat");
 
-    org.setNama("Achmad");
-    s.setId(101);
+    siswa joko_siswa;
+    joko_siswa.setId(1);
 
-    s.displayId();     // tampilkan ID saja
-    s.displayAll(org); // tampilkan semua
+    joko_siswa.displayId();
+    joko_siswa.displayAll(joko);
 
     return 0;
 }
