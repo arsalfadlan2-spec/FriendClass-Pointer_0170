@@ -1,31 +1,23 @@
 #include <iostream>
 using namespace std;
-
 class mahasiswa{
-public:
+    public:
     int nim;
-
-    // Constructor
-    mahasiswa(int x){
-        nim = x;
-    }
-
     void shownim(){
-        cout << "No Induk: " << nim << endl;
+        cout<< " No Induk: "<<nim<<endl;
     }
 };
 
-int main(){
+int main (){
     mahasiswa mhs(1); // objek mhs
     mhs.shownim();
 
-    mahasiswa &refmhs = mhs; // reference
-    refmhs.nim = 2;
+    mahasiswa &refmhs = mhs; // pointer refmhs
+    refmhs.nim = 2; // member accsess operator
     refmhs.shownim();
-
-    mahasiswa *pMhs = &mhs; // pointer
-    pMhs->nim = 3;
+    
+    mahasiswa *pMhs = &mhs; // pointer pMhs
+    pMhs->nim = 3; // operator panah
     pMhs->shownim();
-
     return 0;
 }
